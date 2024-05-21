@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, forwardRef } from "react";
 import { MdOutlineKeyboardDoubleArrowDown } from "react-icons/md";
 import { AboutMySkills } from "./components";
 import { FaLinkedin, FaEnvelope } from "react-icons/fa"; // Import icons from react-icons library
@@ -44,7 +44,7 @@ const Navbar = () => {
   );
 };
 
-const Hero = () => {
+const Hero = ({ scrollToAboutMe }) => {
   return (
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content text-center">
@@ -53,25 +53,26 @@ const Hero = () => {
           <p className="py-6">
             I'M Alex a web developer with an eye for good Design.
           </p>
-          <button className="btn btn-primary flex-col ">
+          <button className="btn btn-primary flex-col " onClick={scrollToAboutMe}>
             <div>Previous Work </div>
             <MdOutlineKeyboardDoubleArrowDown />{" "}
           </button>
         </div>
       </div>
+      
     </div>
   );
 };
-
-const AboutMe = () => {
+const AboutMe = forwardRef((props, ref) => {
   return (
-    <>
+  <section ref={ref} id="about-me">
       <div className="bg-base-200">
         <AboutMySkills />
-      </div>
-    </>
+      </div></section>
+    
   );
-};
+});
+
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -104,12 +105,20 @@ const Footer = () => {
 };
 
 const App = () => {
+  const aboutMeRef = useRef(null);
+
+  const scrollToAboutMe = () => {
+    if (aboutMeRef.current) {
+      aboutMeRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <div data-theme="light">
       <div>
         <Navbar />
-        <Hero />
-        <AboutMe />
+        <Hero scrollToAboutMe={scrollToAboutMe}/>
+        {/* <section ref={aboutMeRef} id="about-me"></section> */}
+        <AboutMe ref={aboutMeRef}/>
         <Footer />
       </div>
     </div>
