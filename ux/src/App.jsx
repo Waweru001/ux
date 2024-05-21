@@ -36,10 +36,15 @@ const Navbar = () => {
         </div >
         <div className="flex flex-col">
         <a className="btn btn-ghost text-xl ">Alex Mwangi</a>
-        <div className="flex justify-center items-center">
-        <a href="https://linkedin.com/in/waweru-mwangi-8994a9231/">
+        <div className="flex justify-center items-center space-x-4">
+        <a href="https://linkedin.com/in/waweru-mwangi-8994a9231/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
           <FaLinkedin size={24} className="fill-current" />
-        </a></div></div>
+        </a>
+        <Mail />
+        </div></div>
       </div>
 
       <div className="flex-none gap-2">
@@ -99,7 +104,9 @@ const Footer = () => {
         <p>Alex © {currentYear} - All rights reserved</p>
       </aside>
       <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-        <a href="https://linkedin.com/in/waweru-mwangi-8994a9231/">
+        <a href="https://linkedin.com/in/waweru-mwangi-8994a9231/"
+        target="_blank"
+        rel="noopener noreferrer">
           <FaLinkedin size={24} className="fill-current" />
         </a>
         <Mail />
