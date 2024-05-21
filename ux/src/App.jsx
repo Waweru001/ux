@@ -33,8 +33,13 @@ const Navbar = () => {
           <div className="w-20 rounded-full">
             <img src="https://bit.ly/4dRgYuO" />
           </div>
-        </div>
+        </div >
+        <div className="flex flex-col">
         <a className="btn btn-ghost text-xl ">Alex Mwangi</a>
+        <div className="flex justify-center items-center">
+        <a href="https://linkedin.com/in/waweru-mwangi-8994a9231/">
+          <FaLinkedin size={24} className="fill-current" />
+        </a></div></div>
       </div>
 
       <div className="flex-none gap-2">
