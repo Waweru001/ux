@@ -50,8 +50,8 @@ const MyProjects = () => {
                     rel="noopener noreferrer"
                     className="name flex items-center text-black hover:text-blue-400 hover:underline"
                   > <img
-                  src="https://asilini.com/wp-content/uploads/2022/05/Asilini.svg"
-                  alt="Digifunzi"
+                  src="/asilini.jpeg"
+                  alt="asilini image"
                   className="items-center h-full w-full"
                 /> </a>
               </div>

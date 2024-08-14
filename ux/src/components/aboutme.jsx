@@ -65,7 +65,7 @@ const AboutMySkills = () => {
                 <span key={3}>Lowfidelity and Skteching</span>,
                 <span key={4}>UX research</span>,
                 <span key={4}>Usability Testing</span>,
-                <span key={5}>Access to coding challenges</span>,
+                // <span key={5}>Access to coding challenges</span>,
                 <span key={6}>Web development</span>,
                 <span key={7}>Html 5</span>,
                 <span key={8}>CSS</span>,

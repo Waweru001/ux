@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className="flex-1 space-x-4">
         <div className="avatar">
           <div className="w-20 rounded-full">
-            <img src="https://bit.ly/4dRgYuO" />
+            <img src="/alex.jpeg" />
           </div>
         </div>
         <div className="flex flex-col">
